@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0E1015">
+<title>BGS Tehnic - vizualuri</title>
+<style>
+  :root { --bg: #0E1015; --txt: #F2F3F5; --muted: #8E96A6; --acc: #0A3DB3; --acc2: #4C6FFF; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; background: var(--bg); color: var(--txt); font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif; overflow: hidden; }
+  header, footer { position: fixed; left: 0; right: 0; z-index: 2; display: flex; align-items: center; gap: 12px; padding: 0 16px; pointer-events: none; }
+  header { top: 0; height: calc(56px + env(safe-area-inset-top)); padding-top: env(safe-area-inset-top); background: linear-gradient(var(--bg) 70%, transparent); }
+  footer { bottom: 0; height: calc(64px + env(safe-area-inset-bottom)); padding-bottom: env(safe-area-inset-bottom); justify-content: center; background: linear-gradient(transparent, var(--bg) 35%); }
+  .nr { font-weight: 700; font-size: 18px; font-variant-numeric: tabular-nums; }
+  .info { color: var(--muted); font-size: 13px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; flex: 1; min-width: 0; }
+  .contor { color: var(--muted); font-size: 13px; font-variant-numeric: tabular-nums; }
+  .bara { position: absolute; left: 0; bottom: 0; height: 2px; background: var(--acc2); width: 0; transition: width .2s; }
+  .cap { pointer-events: auto; border: 1px solid #2A2F3A; background: #171A21; color: var(--txt); font: inherit; font-size: 14px; padding: 8px 14px; border-radius: 999px; cursor: pointer; }
+  .cap span { color: var(--muted); margin-left: 4px; }
+  .cap.activ { background: var(--acc); border-color: var(--acc); }
+  .cap.activ span { color: #C9D6FF; }
+  main { height: 100%; display: flex; overflow-x: auto; overflow-y: hidden; scroll-snap-type: x mandatory; scrollbar-width: none; -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; }
+  main::-webkit-scrollbar { display: none; }
+  .s { flex: 0 0 100%; height: 100%; scroll-snap-align: center; scroll-snap-stop: always; display: flex; align-items: center; justify-content: center;
+       padding: calc(60px + env(safe-area-inset-top)) 12px calc(68px + env(safe-area-inset-bottom)); }
+  .s img { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; border-radius: 6px; box-shadow: 0 8px 40px rgba(0,0,0,.45); user-select: none; -webkit-user-drag: none; }
+  .sag { position: fixed; top: 50%; z-index: 3; transform: translateY(-50%); width: 48px; height: 48px; border-radius: 50%; border: 0; background: rgba(23,26,33,.85); color: var(--txt); font-size: 22px; cursor: pointer; display: none; }
+  .sag.st { left: 16px; } .sag.dr { right: 16px; }
+  @media (hover: hover) and (pointer: fine) { .sag { display: block; } }
+  .indiciu { position: fixed; left: 50%; bottom: calc(80px + env(safe-area-inset-bottom)); transform: translateX(-50%); z-index: 2; color: var(--muted); font-size: 13px; background: rgba(23,26,33,.9); padding: 6px 12px; border-radius: 999px; transition: opacity .6s; pointer-events: none; }
+  @media (hover: hover) and (pointer: fine) { .indiciu { display: none; } }
+</style>
+</head>
+<body>
+<header>
+  <span class="nr" id="nr">2.1</span>
+  <span class="info" id="info"></span>
+  <span class="contor" id="contor">1 / 70</span>
+  <div class="bara" id="bara"></div>
+</header>
+<main id="m">
+<section class="s" id="v2.1" data-n="2.1" data-cap="Meta" data-info="9:16 Reels · Supraveghere video"><img src="img/2-01.jpg" width="1080" height="1919" alt="Vizual 2.1" decoding="async"></section>
+<section class="s" id="v2.2" data-n="2.2" data-cap="Meta" data-info="9:16 Reels · Supraveghere video"><img src="img/2-02.jpg" width="1080" height="1919" alt="Vizual 2.2" decoding="async"></section>
+<section class="s" id="v2.3" data-n="2.3" data-cap="Meta" data-info="9:16 Story · Supraveghere video"><img src="img/2-03.jpg" width="1080" height="1919" alt="Vizual 2.3" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.4" data-n="2.4" data-cap="Meta" data-info="9:16 Story · Supraveghere video"><img src="img/2-04.jpg" width="1080" height="1919" alt="Vizual 2.4" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.5" data-n="2.5" data-cap="Meta" data-info="9:16 Reels · Sisteme de securitate"><img src="img/2-05.jpg" width="1080" height="1919" alt="Vizual 2.5" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.6" data-n="2.6" data-cap="Meta" data-info="9:16 Reels · Sisteme de securitate"><img src="img/2-06.jpg" width="1080" height="1919" alt="Vizual 2.6" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.7" data-n="2.7" data-cap="Meta" data-info="9:16 Story · Sisteme de securitate"><img src="img/2-07.jpg" width="1080" height="1919" alt="Vizual 2.7" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.8" data-n="2.8" data-cap="Meta" data-info="9:16 Story · Sisteme de securitate"><img src="img/2-08.jpg" width="1080" height="1919" alt="Vizual 2.8" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.9" data-n="2.9" data-cap="Meta" data-info="9:16 Reels · Detectie incendiu"><img src="img/2-09.jpg" width="1080" height="1919" alt="Vizual 2.9" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.10" data-n="2.10" data-cap="Meta" data-info="9:16 Reels · Detectie incendiu"><img src="img/2-10.jpg" width="1080" height="1919" alt="Vizual 2.10" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.11" data-n="2.11" data-cap="Meta" data-info="9:16 Story · Detectie incendiu"><img src="img/2-11.jpg" width="1080" height="1919" alt="Vizual 2.11" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.12" data-n="2.12" data-cap="Meta" data-info="9:16 Story · Detectie incendiu"><img src="img/2-12.jpg" width="1080" height="1919" alt="Vizual 2.12" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.13" data-n="2.13" data-cap="Meta" data-info="9:16 Reels · Control acces birou"><img src="img/2-13.jpg" width="1080" height="1919" alt="Vizual 2.13" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.14" data-n="2.14" data-cap="Meta" data-info="9:16 Reels · Control acces birou"><img src="img/2-14.jpg" width="1080" height="1919" alt="Vizual 2.14" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.15" data-n="2.15" data-cap="Meta" data-info="9:16 Story · Control acces birou"><img src="img/2-15.jpg" width="1080" height="1919" alt="Vizual 2.15" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.16" data-n="2.16" data-cap="Meta" data-info="9:16 Story · Control acces birou"><img src="img/2-16.jpg" width="1080" height="1919" alt="Vizual 2.16" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.17" data-n="2.17" data-cap="Meta" data-info="9:16 Reels · Control acces casa"><img src="img/2-17.jpg" width="1080" height="1919" alt="Vizual 2.17" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.18" data-n="2.18" data-cap="Meta" data-info="9:16 Reels · Control acces casa"><img src="img/2-18.jpg" width="1080" height="1919" alt="Vizual 2.18" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.19" data-n="2.19" data-cap="Meta" data-info="9:16 Story · Control acces casa"><img src="img/2-19.jpg" width="1080" height="1919" alt="Vizual 2.19" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.20" data-n="2.20" data-cap="Meta" data-info="9:16 Story · Control acces casa"><img src="img/2-20.jpg" width="1080" height="1919" alt="Vizual 2.20" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.21" data-n="2.21" data-cap="Meta" data-info="4:5 · Supraveghere video"><img src="img/2-21.jpg" width="1080" height="1350" alt="Vizual 2.21" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.22" data-n="2.22" data-cap="Meta" data-info="4:5 · Supraveghere video"><img src="img/2-22.jpg" width="1080" height="1350" alt="Vizual 2.22" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.23" data-n="2.23" data-cap="Meta" data-info="4:5 · Sisteme de securitate"><img src="img/2-23.jpg" width="1080" height="1350" alt="Vizual 2.23" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.24" data-n="2.24" data-cap="Meta" data-info="4:5 · Sisteme de securitate"><img src="img/2-24.jpg" width="1080" height="1350" alt="Vizual 2.24" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.25" data-n="2.25" data-cap="Meta" data-info="4:5 · Detectie incendiu"><img src="img/2-25.jpg" width="1080" height="1350" alt="Vizual 2.25" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.26" data-n="2.26" data-cap="Meta" data-info="4:5 · Detectie incendiu"><img src="img/2-26.jpg" width="1080" height="1350" alt="Vizual 2.26" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.27" data-n="2.27" data-cap="Meta" data-info="4:5 · Control acces birou"><img src="img/2-27.jpg" width="1080" height="1350" alt="Vizual 2.27" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.28" data-n="2.28" data-cap="Meta" data-info="4:5 · Control acces birou"><img src="img/2-28.jpg" width="1080" height="1350" alt="Vizual 2.28" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.29" data-n="2.29" data-cap="Meta" data-info="4:5 · Control acces casa"><img src="img/2-29.jpg" width="1080" height="1350" alt="Vizual 2.29" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.30" data-n="2.30" data-cap="Meta" data-info="4:5 · Control acces casa"><img src="img/2-30.jpg" width="1080" height="1350" alt="Vizual 2.30" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.31" data-n="2.31" data-cap="Meta" data-info="1:1 · Supraveghere video"><img src="img/2-31.jpg" width="1080" height="1080" alt="Vizual 2.31" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.32" data-n="2.32" data-cap="Meta" data-info="1:1 · Supraveghere video"><img src="img/2-32.jpg" width="1080" height="1080" alt="Vizual 2.32" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.33" data-n="2.33" data-cap="Meta" data-info="1:1 · Sisteme de securitate"><img src="img/2-33.jpg" width="1080" height="1080" alt="Vizual 2.33" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.34" data-n="2.34" data-cap="Meta" data-info="1:1 · Sisteme de securitate"><img src="img/2-34.jpg" width="1080" height="1080" alt="Vizual 2.34" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.35" data-n="2.35" data-cap="Meta" data-info="1:1 · Detectie incendiu"><img src="img/2-35.jpg" width="1080" height="1080" alt="Vizual 2.35" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.36" data-n="2.36" data-cap="Meta" data-info="1:1 · Detectie incendiu"><img src="img/2-36.jpg" width="1080" height="1080" alt="Vizual 2.36" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.37" data-n="2.37" data-cap="Meta" data-info="1:1 · Control acces birou"><img src="img/2-37.jpg" width="1080" height="1080" alt="Vizual 2.37" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.38" data-n="2.38" data-cap="Meta" data-info="1:1 · Control acces birou"><img src="img/2-38.jpg" width="1080" height="1080" alt="Vizual 2.38" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.39" data-n="2.39" data-cap="Meta" data-info="1:1 · Control acces casa"><img src="img/2-39.jpg" width="1080" height="1080" alt="Vizual 2.39" loading="lazy" decoding="async"></section>
+<section class="s" id="v2.40" data-n="2.40" data-cap="Meta" data-info="1:1 · Control acces casa"><img src="img/2-40.jpg" width="1080" height="1080" alt="Vizual 2.40" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.1" data-n="3.1" data-cap="Google" data-info="4:5 · Supraveghere video"><img src="img/3-01.jpg" width="1080" height="1350" alt="Vizual 3.1" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.2" data-n="3.2" data-cap="Google" data-info="4:5 · Supraveghere video"><img src="img/3-02.jpg" width="1080" height="1350" alt="Vizual 3.2" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.3" data-n="3.3" data-cap="Google" data-info="4:5 · Sisteme de securitate"><img src="img/3-03.jpg" width="1080" height="1350" alt="Vizual 3.3" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.4" data-n="3.4" data-cap="Google" data-info="4:5 · Sisteme de securitate"><img src="img/3-04.jpg" width="1080" height="1350" alt="Vizual 3.4" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.5" data-n="3.5" data-cap="Google" data-info="4:5 · Detectie incendiu"><img src="img/3-05.jpg" width="1080" height="1350" alt="Vizual 3.5" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.6" data-n="3.6" data-cap="Google" data-info="4:5 · Detectie incendiu"><img src="img/3-06.jpg" width="1080" height="1350" alt="Vizual 3.6" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.7" data-n="3.7" data-cap="Google" data-info="4:5 · Control acces birou"><img src="img/3-07.jpg" width="1080" height="1350" alt="Vizual 3.7" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.8" data-n="3.8" data-cap="Google" data-info="4:5 · Control acces birou"><img src="img/3-08.jpg" width="1080" height="1350" alt="Vizual 3.8" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.9" data-n="3.9" data-cap="Google" data-info="4:5 · Control acces casa"><img src="img/3-09.jpg" width="1080" height="1350" alt="Vizual 3.9" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.10" data-n="3.10" data-cap="Google" data-info="4:5 · Control acces casa"><img src="img/3-10.jpg" width="1080" height="1350" alt="Vizual 3.10" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.11" data-n="3.11" data-cap="Google" data-info="1:1 · Supraveghere video"><img src="img/3-11.jpg" width="1080" height="1080" alt="Vizual 3.11" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.12" data-n="3.12" data-cap="Google" data-info="1:1 · Supraveghere video"><img src="img/3-12.jpg" width="1080" height="1080" alt="Vizual 3.12" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.13" data-n="3.13" data-cap="Google" data-info="1:1 · Sisteme de securitate"><img src="img/3-13.jpg" width="1080" height="1080" alt="Vizual 3.13" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.14" data-n="3.14" data-cap="Google" data-info="1:1 · Sisteme de securitate"><img src="img/3-14.jpg" width="1080" height="1080" alt="Vizual 3.14" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.15" data-n="3.15" data-cap="Google" data-info="1:1 · Detectie incendiu"><img src="img/3-15.jpg" width="1080" height="1080" alt="Vizual 3.15" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.16" data-n="3.16" data-cap="Google" data-info="1:1 · Detectie incendiu"><img src="img/3-16.jpg" width="1080" height="1080" alt="Vizual 3.16" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.17" data-n="3.17" data-cap="Google" data-info="1:1 · Control acces birou"><img src="img/3-17.jpg" width="1080" height="1080" alt="Vizual 3.17" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.18" data-n="3.18" data-cap="Google" data-info="1:1 · Control acces birou"><img src="img/3-18.jpg" width="1080" height="1080" alt="Vizual 3.18" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.19" data-n="3.19" data-cap="Google" data-info="1:1 · Control acces casa"><img src="img/3-19.jpg" width="1080" height="1080" alt="Vizual 3.19" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.20" data-n="3.20" data-cap="Google" data-info="1:1 · Control acces casa"><img src="img/3-20.jpg" width="1080" height="1080" alt="Vizual 3.20" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.21" data-n="3.21" data-cap="Google" data-info="1.91:1 · Supraveghere video"><img src="img/3-21.jpg" width="1200" height="628" alt="Vizual 3.21" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.22" data-n="3.22" data-cap="Google" data-info="1.91:1 · Supraveghere video"><img src="img/3-22.jpg" width="1200" height="628" alt="Vizual 3.22" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.23" data-n="3.23" data-cap="Google" data-info="1.91:1 · Sisteme de securitate"><img src="img/3-23.jpg" width="1200" height="628" alt="Vizual 3.23" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.24" data-n="3.24" data-cap="Google" data-info="1.91:1 · Sisteme de securitate"><img src="img/3-24.jpg" width="1200" height="628" alt="Vizual 3.24" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.25" data-n="3.25" data-cap="Google" data-info="1.91:1 · Detectie incendiu"><img src="img/3-25.jpg" width="1200" height="628" alt="Vizual 3.25" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.26" data-n="3.26" data-cap="Google" data-info="1.91:1 · Detectie incendiu"><img src="img/3-26.jpg" width="1200" height="628" alt="Vizual 3.26" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.27" data-n="3.27" data-cap="Google" data-info="1.91:1 · Control acces birou"><img src="img/3-27.jpg" width="1200" height="628" alt="Vizual 3.27" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.28" data-n="3.28" data-cap="Google" data-info="1.91:1 · Control acces birou"><img src="img/3-28.jpg" width="1200" height="628" alt="Vizual 3.28" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.29" data-n="3.29" data-cap="Google" data-info="1.91:1 · Control acces casa"><img src="img/3-29.jpg" width="1200" height="628" alt="Vizual 3.29" loading="lazy" decoding="async"></section>
+<section class="s" id="v3.30" data-n="3.30" data-cap="Google" data-info="1.91:1 · Control acces casa"><img src="img/3-30.jpg" width="1200" height="628" alt="Vizual 3.30" loading="lazy" decoding="async"></section>
+</main>
+<footer>
+<button class="cap" data-la="2.1">Meta <span>40</span></button>
+<button class="cap" data-la="3.1">Google <span>30</span></button>
+</footer>
+<button class="sag st" id="st" aria-label="Vizualul anterior">‹</button>
+<button class="sag dr" id="dr" aria-label="Vizualul urmator">›</button>
+<div class="indiciu" id="indiciu">Gliseaza stanga / dreapta</div>
+<script>
+  const m = document.getElementById('m'), S = [...document.querySelectorAll('.s')], N = S.length;
+  const caps = [...document.querySelectorAll('.cap')];
+  let cur = 0;
+  const arata = (i) => {
+    cur = i; const s = S[i];
+    document.getElementById('nr').textContent = s.dataset.n;
+    document.getElementById('info').textContent = s.dataset.cap + ' · ' + s.dataset.info;
+    document.getElementById('contor').textContent = (i + 1) + ' / ' + N;
+    document.getElementById('bara').style.width = ((i + 1) / N * 100) + '%';
+    caps.forEach((b) => b.classList.toggle('activ', b.textContent.startsWith(s.dataset.cap)));
+    history.replaceState(null, '', '#' + s.dataset.n);
+  };
+  const du = (i, lin) => { i = Math.max(0, Math.min(N - 1, i)); m.scrollTo({ left: i * m.clientWidth, behavior: lin ? 'auto' : 'smooth' }); };
+  let t; m.addEventListener('scroll', () => { const i = Math.round(m.scrollLeft / m.clientWidth); if (i !== cur) arata(i);
+    clearTimeout(t); t = setTimeout(() => document.getElementById('indiciu').style.opacity = 0, 400); }, { passive: true });
+  caps.forEach((b) => b.addEventListener('click', () => du(S.findIndex((s) => s.dataset.n === b.dataset.la))));
+  document.getElementById('st').onclick = () => du(cur - 1);
+  document.getElementById('dr').onclick = () => du(cur + 1);
+  addEventListener('keydown', (e) => { if (e.key === 'ArrowRight') du(cur + 1); if (e.key === 'ArrowLeft') du(cur - 1); });
+  addEventListener('resize', () => du(cur, true));
+  const h = decodeURIComponent(location.hash.slice(1)), k = S.findIndex((s) => s.dataset.n === h);
+  arata(k > 0 ? k : 0); if (k > 0) requestAnimationFrame(() => du(k, true));
+  setTimeout(() => document.getElementById('indiciu').style.opacity = 0, 3500);
+</script>
+</body>
+</html>
