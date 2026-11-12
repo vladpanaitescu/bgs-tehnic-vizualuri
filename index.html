@@ -131,7 +131,8 @@
     caps.forEach((b) => b.classList.toggle('activ', b.textContent.startsWith(s.dataset.cap)));
     history.replaceState(null, '', '#' + s.dataset.n);
   };
-  const du = (i, lin) => { i = Math.max(0, Math.min(N - 1, i)); m.scrollTo({ left: i * m.clientWidth, behavior: lin ? 'auto' : 'smooth' }); };
+  // salturile mai lungi de un vizual fără animație: cu scroll-snap-stop, derularea lină se oprește la primul vizual
+  const du = (i, lin) => { i = Math.max(0, Math.min(N - 1, i)); m.scrollTo({ left: i * m.clientWidth, behavior: lin || Math.abs(i - cur) > 1 ? 'auto' : 'smooth' }); };
   let t; m.addEventListener('scroll', () => { const i = Math.round(m.scrollLeft / m.clientWidth); if (i !== cur) arata(i);
     clearTimeout(t); t = setTimeout(() => document.getElementById('indiciu').style.opacity = 0, 400); }, { passive: true });
   caps.forEach((b) => b.addEventListener('click', () => du(S.findIndex((s) => s.dataset.n === b.dataset.la))));
